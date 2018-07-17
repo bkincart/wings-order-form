@@ -11,6 +11,10 @@
     <% wing_order.flavors.each do |flavor| %>
       <span><%= flavor.name %></span>
     <% end %>
+    <p><%= link_to 'Edit Wing Order', edit_wing_order_path(wing_order) %></p>
+    <p><%= link_to 'Delete Wing Order', wing_order_path(wing_order),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
   </div>
   <hr />
 <% end %>

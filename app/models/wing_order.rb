@@ -13,7 +13,7 @@ class WingOrder < ApplicationRecord
     [100, "100 wings"]
   ]
 
-  has_many :order_flavors
+  has_many :order_flavors, dependent: :destroy
   has_many :flavors, through: :order_flavors
 
   validates :customer_name, presence: true
